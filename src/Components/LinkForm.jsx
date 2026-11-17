@@ -4,17 +4,15 @@ function LinkForm() {
   // Store functions
   let addLink = useLinksStore((state) => state.addLink);
 
-
   const title = useRef();
   const url = useRef();
   const tags = useRef();
   const comment = useRef();
   const favorite = useRef();
-  const id = crypto.randomUUID();
 
-  
   function form(evt) {
     evt.preventDefault();
+    const id = crypto.randomUUID();
 
     const Data = new FormData();
 
